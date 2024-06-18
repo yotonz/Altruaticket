@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-from pathlib import Path
 import requests
 
 # Azure OpenAI API details
@@ -99,7 +98,7 @@ def get_openai_response(history, agent_name, df, query):
         return f"Error: {str(e)}"
 
 # Path to your CSV file
-csv_file_path = "data/tickets.csv"
+csv_file_path = "tickets.csv"
 
 # Load and clean CSV file
 df = clean_csv_data(csv_file_path)
